@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('node') {
+        stage('Build') {
              agent {
                  label 'chef-server'
              }
