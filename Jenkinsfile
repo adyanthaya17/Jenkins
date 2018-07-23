@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'chef-server'
-    }  
+    node ('chef-server'){
     stages {
         stage('Build') {
             steps {
@@ -19,5 +17,6 @@ pipeline {
             }
         }
     }
+}
 }
 
