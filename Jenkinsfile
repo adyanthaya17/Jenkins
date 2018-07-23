@@ -1,7 +1,8 @@
 pipeline {
-    agent any
+    agent {
+        label 'chef-server'
+    }  
     stages {
-        agent { node { label 'chef-server' } }
         stage('Build') {
             steps {
                 sh 'ssh oss@10.211.203.214:/home/oss/chef-repo'
@@ -19,3 +20,4 @@ pipeline {
         }
     }
 }
+
