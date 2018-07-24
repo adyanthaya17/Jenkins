@@ -1,5 +1,5 @@
 pipeline {
-    node ('chef-server'){
+    agent any
     stages {
         stage('Build') {
             steps {
