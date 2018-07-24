@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ssh -t -t'
-                sh 'ssh -t -t oss@chef-server:/home/oss/chef-repo'
+                sh 'ssh oss@10.211.203.214:/home/oss/chef-repo'
             }
                  }
         stage('Test') {
