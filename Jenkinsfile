@@ -4,12 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cd /home/oss/chef-repo'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'knife node run_list set ucp1 recipe[ntp] '
+                sh 'echo 'hello world''
             }
         }
     }
