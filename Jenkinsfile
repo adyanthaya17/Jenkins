@@ -1,12 +1,13 @@
 pipeline {
     agent any
+
     stages {
-        stage('Initialize') {
+        stage('Build') {
             steps {
                 sh 'cd /home/oss/chef-repo'
             }
         }
-        stage('Build') {
+        stage('Test') {
             steps {
                 sh 'knife node run_list set ucp1 recipe[ntp]'
             }
