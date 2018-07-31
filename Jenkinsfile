@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'knife node run_list set ucp1 recipe[ntp]'
+                sh 'knife node run_list set ucp1 recipe[ntp] '
             }
         }
     }
