@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Run') {
+        stage('Run') 
             steps {
                 sh ' touch file'
             }
