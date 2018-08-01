@@ -1,15 +1,10 @@
 pipeline {
-    agent any
+    agent {chef-server}
     stages {
         stage('Run') { 
             steps {
-                sh ' touch file'
+                sh 'cd /home/oss && touch file'
             }
          } 
-       stage('Build') {
-            steps {
-                sh 'touch file'
-            }
-        }
     }
 }
